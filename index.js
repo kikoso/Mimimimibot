@@ -30,7 +30,7 @@ function replaceAll(str, find, replace) {
 }
 
 async function mimify(tweet) {
-    if (tweet.user.id != 1130289164019126300) {
+    if (tweet.user.id != 1130289164019126300 && tweet.text == "@MimimimimimiBot") {
 
         if (tweet.in_reply_to_status_id_str != null) {
             var x = await client.get("statuses/show", {id: tweet.in_reply_to_status_id_str, tweet_mode: "extended"})
